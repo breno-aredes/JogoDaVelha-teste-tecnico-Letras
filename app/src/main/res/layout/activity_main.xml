@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_marginTop="20dp"
+            android:id="@+id/Logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:padding="40dp"
+           />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40pt"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Jogo"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius"
+            android:gravity="center"
+            android:layout_marginTop="10dp">
+            <Button
+                android:id="@+id/vsPlayer"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:onClick="selectVsPlayer"
+                android:text="Vs Jogador"
+                android:textColor="@color/black"
+                android:layout_marginLeft="3dp"
+                />
+
+            <Button
+                android:id="@+id/vsBot"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/lgray"
+                android:onClick="selectVsBot"
+                android:text="Vs Bot"
+                android:textColor="@color/black"
+                android:layout_marginRight="3dp"
+               />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="105dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome Dos Jogadores"
+            android:textStyle="bold"
+            />
+        <EditText
+            android:id="@+id/player1"
+            android:layout_marginTop="10dp"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:hint="Jogador 1"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"/>
+
+        <EditText
+            android:id="@+id/player2"
+            android:layout_width="330dp"
+            android:layout_height="40dp"
+            android:hint="Jogador 2"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"/>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tamanho do tabuleiro"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/radius"
+            android:padding="3dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+
+                <Button
+                    android:id="@+id/x3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:text="3x3"
+                    android:textColor="@color/black"
+                    android:onClick="selectedSize"
+                    android:tag="3"/>
+
+                <Button
+                    android:id="@+id/x4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/lgray"
+                    android:onClick="selectedSize"
+                    android:text="4x4"
+                    android:textColor="@color/black"
+                    android:tag="4"/>
+
+                <Button
+                    android:id="@+id/x5"
+                    android:backgroundTint="@color/lgray"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="5x5"
+                    android:onClick="selectedSize"
+                    android:tag="5"/>
+
+                <Button
+                    android:id="@+id/x6"
+                    android:backgroundTint="@color/lgray"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="6x6"
+                    android:onClick="selectedSize"
+                    android:tag="6"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/x7"
+                    android:backgroundTint="@color/lgray"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="7x7"
+                    android:onClick="selectedSize"
+                    android:tag="7"/>
+
+                <Button
+                    android:id="@+id/x8"
+                    android:backgroundTint="@color/lgray"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="8x8"
+                    android:onClick="selectedSize"
+                    android:tag="8"/>
+
+                <Button
+                    android:id="@+id/x9"
+                    android:backgroundTint="@color/lgray"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="9x9"
+                    android:onClick="selectedSize"
+                    android:tag="9"/>
+
+                <Button
+                    android:id="@+id/x10"
+                    android:backgroundTint="@color/lgray"
+                    android:textColor="@color/black"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="10x10"
+                    android:onClick="selectedSize"
+                    android:tag="10"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            android:onClick="startTheGame"
+            android:text="Começar Partida" />
+        <Button
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/lblue"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:text="Historico de Partidas"
+            android:textColor="@color/blue"
+            android:onClick="hitoric"/>
+    </LinearLayout>
+</LinearLayout>

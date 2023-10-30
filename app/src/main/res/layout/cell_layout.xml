@@ -1,0 +1,11 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:gravity="center"
+    android:background="@drawable/cell_border"
+    android:onClick="onCellClick"
+    android:textSize="50sp"
+    > </TextView>
+
